@@ -1,4 +1,4 @@
-Run GUI.bat
+Run GUI.vbs
 
 Figure out the rest :)
 
