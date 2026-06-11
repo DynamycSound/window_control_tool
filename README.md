@@ -98,7 +98,3 @@ in the [issue tracker](https://github.com/DynamycSound/window_control_tool/issue
 
 This project is free and open source under the [MIT License](LICENSE) —
 you may use, copy, modify and redistribute it, commercially or not.
-
----
-
-Made by **Stefan M. (DynamycSound)**

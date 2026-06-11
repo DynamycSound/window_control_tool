@@ -281,7 +281,6 @@ class App(ctk.CTk):
             text=(
                 f"Version {__version__}\n"
                 "Move, resize and restyle any window with global hotkeys.\n\n"
-                "Made by Stefan M. (DynamycSound)\n"
                 "Free and open source under the MIT License - you may use, "
                 "modify and redistribute it freely."
             ),
