@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "window-control-tool"
+version = "2.0.0"
+description = "Move, resize and restyle any window on Windows with global hotkeys."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Stefan M. (DynamycSound)" }]
+requires-python = ">=3.9"
+keywords = ["windows", "hotkeys", "window-manager", "always-on-top", "opacity"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Desktop Environment :: Window Managers",
+]
+dependencies = [
+    "customtkinter>=5.2",
+    "keyboard>=0.13.5; sys_platform == 'win32'",
+    "pywin32>=306; sys_platform == 'win32'",
+]
+
+[project.urls]
+Homepage = "https://github.com/DynamycSound/window_control_tool"
+Issues = "https://github.com/DynamycSound/window_control_tool/issues"
+
+[project.gui-scripts]
+window-control-tool = "window_control_tool.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
