@@ -1,0 +1,43 @@
+name: Bug report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: When I press Shift + Right, the window...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the app
+        2. Enable hotkeys
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      placeholder: e.g. Windows 11 24H2
+    validations:
+      required: true
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: How are you running the tool?
+      options:
+        - Release exe
+        - From source (python -m window_control_tool)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Activity log / error output
+      description: Paste anything relevant from the app's Activity log or the console.
