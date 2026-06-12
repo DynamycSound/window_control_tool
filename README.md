@@ -56,59 +56,58 @@ cd window_control_tool
 pip install -r requirements.txt
 pip install -e .
 python -m window_control_tool
+```
 
-(Alternatively, if you do not want to install it locally, you can set the Python
-path environment variable before running: $env:PYTHONPATH="src"; python -m
-window_control_tool in PowerShell.)
+*(Alternatively, if you do not want to install it locally, you can set the Python path environment variable before running: `$env:PYTHONPATH="src"; python -m window_control_tool` in PowerShell.)*
 
-Build the exe yourself
+### Build the exe yourself
 
-To build a working executable without import errors, create a temporary file
-named run.py in the root directory with this content:
+To build a working executable without import errors, create a temporary file named `run.py` in the root directory with this content:
 
+```python
 from window_control_tool.gui import run
 if __name__ == "__main__":
     run()
+```
 
-Then, compile the executable by pointing PyInstaller to run.py and referencing
-the src directory:
+Then, compile the executable by pointing PyInstaller to `run.py` and referencing the `src` directory:
 
+```bash
 pip install pyinstaller
 pyinstaller --noconfirm --onefile --windowed --name WindowControlTool \
   --paths src --collect-all customtkinter run.py
+```
 
-The working exe will appear in the dist/ folder. You can safely delete run.py
-after the build is complete.
+The working exe will appear in the `dist/` folder. You can safely delete `run.py` after the build is complete.
 
-🖥️ Requirements
+## 🖥️ Requirements
 
-  - Windows 10 / 11 (the win32 APIs the tool uses are Windows-only)
-  - Python 3.9+ if running from source
+- Windows 10 / 11 (the win32 APIs the tool uses are Windows-only)
+- Python 3.9+ if running from source
 
-⚙️ Configuration
+## ⚙️ Configuration
 
-Everything is configurable from the Settings page in the app:
+Everything is configurable from the **Settings** page in the app:
 
-  - Move / resize step — pixels per key press (default 40)
-  - Opacity change per press — 10 / 25 / 50
-  - Appearance — dark, light or follow the system
-  - Auto-enable hotkeys when the app starts
+- **Move / resize step** — pixels per key press (default 40)
+- **Opacity change per press** — 10 / 25 / 50
+- **Appearance** — dark, light or follow the system
+- **Auto-enable hotkeys** when the app starts
 
-Settings are stored in %APPDATA%\WindowControlTool\settings.json.
+Settings are stored in `%APPDATA%\WindowControlTool\settings.json`.
 
-🤝 Contributing
+## 🤝 Contributing
 
-Contributions are welcome! Please read CONTRIBUTING.md for how to set up a dev
-environment, the code style, and how to submit pull requests. Bug reports and
-feature ideas go in the issue tracker.
+Contributions are welcome! Please read
+[CONTRIBUTING.md](CONTRIBUTING.md) for how to set up a dev environment, the
+code style, and how to submit pull requests. Bug reports and feature ideas go
+in the [issue tracker](https://github.com/DynamycSound/window_control_tool/issues).
 
-📄 License
+## 📄 License
 
-This project is free and open source under the MIT License — you may use, copy,
-modify and redistribute it, commercially or not.
+This project is free and open source under the [MIT License](LICENSE) —
+you may use, copy, modify and redistribute it, commercially or not.
 
-Made by Stefan M. (DynamycSound)
-
-
+---
 
 Made by **Stefan M. (DynamycSound)**
